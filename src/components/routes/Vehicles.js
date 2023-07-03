@@ -1,9 +1,11 @@
 import React from "react";
+import Navbar from "../Navbar";
 
 const Vehicles = () => {
   return (
     <>
-      <h1>Vehicles Page</h1>
+      <Navbar />
+      <h1>Rides Page</h1>
     </>
   );
 };

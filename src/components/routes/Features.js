@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import scooter from "../img/scoo.png";
+import scooter from "../../asstes/scoo.png";
+import Navbar from "../Navbar";
 
 const Features = () => {
   const [time, setTime] = useState(0);
@@ -26,8 +27,8 @@ const Features = () => {
   };
 
   const calculateCost = () => {
-    const timeCost = time * 0.30;
-    const distanceCost = distance * 0.40;
+    const timeCost = time * 0.3;
+    const distanceCost = distance * 0.4;
     return timeCost + distanceCost;
   };
 
@@ -46,9 +47,11 @@ const Features = () => {
 
   return (
     <>
+      <Navbar />
+      <Container style={{ marginTop: "180px" }}>
       <h1>Features Page</h1>
 
-      <Container>
+      
         <table class="table">
           <thead>
             <tr>
