@@ -3,10 +3,14 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+      <nav
+        class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark"
+        data-bs-theme="dark"
+        style={{height: "80px"}}
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="/#">
-            SooTeq
+            <strong>SCOOTEQ</strong>
           </a>
           <button
             class="navbar-toggler"
@@ -21,17 +25,14 @@ const Navbar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="/#">
-                Home
+              <a class="nav-link" href="/about">
+                About Us
               </a>
-              <a class="nav-link" href="/#">
+              <a class="nav-link" href="/vehicles">
+                Vehicles
+              </a>
+              <a class="nav-link" href="/features">
                 Features
-              </a>
-              <a class="nav-link" href="/#">
-                Pricing
-              </a>
-              <a class="nav-link" href="/#">
-                Test
               </a>
             </div>
           </div>

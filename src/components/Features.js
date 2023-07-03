@@ -1,30 +1,64 @@
-import "./App.css";
-import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import Features from "./components/Features";
-import Vehicles from "./components/Vehicles";
-import About from "./components/About";
+import React, { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
+import scooter from "../img/scoo.png";
 
-function App() {
+const Features = () => {
+  const [time, setTime] = useState(0);
+  const [distance, setDistance] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
+
+  useEffect(() => {
+    let intervalId;
+
+    if (isRunning) {
+      intervalId = setInterval(() => {
+        setTime((prevTime) => prevTime + 1);
+      }, 1000);
+    }
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [isRunning]);
+
+  const handleClick = () => {
+    setIsRunning((prevIsRunning) => !prevIsRunning);
+  };
+
+  const calculateCost = () => {
+    const timeCost = time * 0.30;
+    const distanceCost = distance * 0.40;
+    return timeCost + distanceCost;
+  };
+
+  const formatTime = (timeInSeconds) => {
+    const minutes = Math.floor(timeInSeconds / 60)
+      .toString()
+      .padStart(2, "0");
+    const seconds = (timeInSeconds % 60).toString().padStart(2, "0");
+    return `${minutes}:${seconds}`;
+  };
+
+  const handleDistanceChange = (event) => {
+    const newDistance = Number(event.target.value);
+    setDistance(newDistance);
+  };
+
   return (
-    <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/features" element={<Features />}></Route>
-        <Route path="/vehicles" element={<Vehicles />}></Route>
-      </Routes>
-      {/* <Container>
+    <>
+      <h1>Features Page</h1>
+
+      <Container>
         <table class="table">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">No.</th>
               <th scope="col">available</th>
-              <th scope="col">price per minute</th>
-              <th scope="col">km</th>
+              <th scope="col">€/min</th>
+              <th scope="col">€/km</th>
+              <th scope="col">duration</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -56,6 +90,21 @@ function App() {
               </td>
               <td>0.30</td>
               <td>0.40</td>
+              <td>{formatTime(time)}</td>
+              <td>
+                <label>Distance in km: </label>
+                <input
+                  type="number"
+                  value={distance}
+                  onChange={handleDistanceChange}
+                />
+              </td>
+              <td>€{calculateCost().toFixed(2)}</td>
+              <td>
+                <button className="btn btn-success" onClick={handleClick}>
+                  {isRunning ? "Ausleihen" : "Start"}
+                </button>
+              </td>
             </tr>
             <tr>
               <th scope="row">
@@ -147,9 +196,9 @@ function App() {
             </tr>
           </tbody>
         </table>
-      </Container> */}
-    </div>
+      </Container>
+    </>
   );
-}
+};
 
-export default App;
+export default Features;
