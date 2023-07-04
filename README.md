@@ -8,6 +8,8 @@ This is the landing page for our project.
 
 ## Price Calculator 
 
+WIP calculator page
+
 ![image](https://github.com/Nephilie/lf2-scooteq/assets/17929915/dabc07df-bd76-43e2-b0b9-583857f75a51)
 
 
