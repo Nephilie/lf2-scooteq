@@ -27,8 +27,9 @@ const Features = () => {
   };
 
   const calculateCost = () => {
-    const timeCost = time * 0.3;
-    const distanceCost = distance * 0.4;
+    const timeInMinutes = time / 60;
+    const timeCost = timeInMinutes * 0.30;
+    const distanceCost = distance * 0.40;
     return timeCost + distanceCost;
   };
 
@@ -49,9 +50,8 @@ const Features = () => {
     <>
       <Navbar />
       <Container style={{ marginTop: "180px" }}>
-      <h1>Features Page</h1>
+        <h1>Features Page</h1>
 
-      
         <table class="table">
           <thead>
             <tr>
@@ -94,7 +94,7 @@ const Features = () => {
               <td>0.30</td>
               <td>0.40</td>
               <td>{formatTime(time)}</td>
-              <td>
+              {/* <td>
                 <label>Distance in km: </label>
                 <input
                   type="number"
@@ -102,10 +102,10 @@ const Features = () => {
                   onChange={handleDistanceChange}
                 />
               </td>
-              <td>€{calculateCost().toFixed(2)}</td>
+              <td>€{calculateCost().toFixed(2)}</td> */}
               <td>
                 <button className="btn btn-success" onClick={handleClick}>
-                  {isRunning ? "Ausleihen" : "Start"}
+                  {isRunning ? "Stop" : "Start"}
                 </button>
               </td>
             </tr>
@@ -138,6 +138,12 @@ const Features = () => {
               </td>
               <td>0.30</td>
               <td>0.40</td>
+              <td>{formatTime(time)}</td>
+              <td>
+                <button className="btn btn-success" onClick={handleClick}>
+                  {isRunning ? "Stop" : "Start"}
+                </button>
+              </td>
             </tr>
             <tr>
               <th scope="row">
@@ -167,6 +173,12 @@ const Features = () => {
               </td>
               <td>0.30</td>
               <td>0.40</td>
+              <td>{formatTime(time)}</td>
+              <td>
+                <button className="btn btn-success" onClick={handleClick}>
+                  {isRunning ? "Stop" : "Start"}
+                </button>
+              </td>
             </tr>
             <tr>
               <th scope="row">
@@ -196,9 +208,25 @@ const Features = () => {
               </td>
               <td>0.30</td>
               <td>0.40</td>
+              <td>{formatTime(time)}</td>
+              <td>
+                <button className="btn btn-success" onClick={handleClick}>
+                  {isRunning ? "Stop" : "Start"}
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>
+
+        <div>
+          <label>Distance in km:</label>
+          <input
+            type="number"
+            value={distance}
+            onChange={handleDistanceChange}
+          />
+        </div>
+        <div>€{calculateCost().toFixed(2)}</div>
       </Container>
     </>
   );
