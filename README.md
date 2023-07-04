@@ -1,4 +1,7 @@
 # ScooTeq Website
+
+This is the landing page for our project.
+
 ![image](https://github.com/Nephilie/lf2-scooteq/assets/17929915/27c8b623-2c6a-482f-988a-3127f6cec491)
 
 
