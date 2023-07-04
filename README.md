@@ -1,3 +1,11 @@
+# ScooTeq Website
+![image](https://github.com/Nephilie/lf2-scooteq/assets/17929915/27c8b623-2c6a-482f-988a-3127f6cec491)
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
