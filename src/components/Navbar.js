@@ -1,26 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
+import "./NavbarStyles.css";
+import { NavItems } from "./NavItems";
+import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  return (
-    <>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/#">Home</a>
-        <a class="nav-link" href="/#">Features</a>
-        <a class="nav-link" href="/#">Pricing</a>
-        
-      </div>
-    </div>
-  </div>
-</nav>
-    </>
-  );
-};
+class Navbar extends Component {
+  state = { clicked: false };
+
+  handleClick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
+
+  render() {
+    return (
+      <nav className="navbar-items">
+        <h1 className="navbar-logo">SCOOTEQ</h1>
+
+        <div className="menu-icons" onClick={this.handleClick}>
+          <i
+            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+          ></i>
+        </div>
+
+        <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+          {NavItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <Link className={item.cName} to={item.url}>
+                  {item.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    );
+  }
+}
 
 export default Navbar;
