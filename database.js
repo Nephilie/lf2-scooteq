@@ -1,6 +1,5 @@
-const {createPool}= require('mysql');
-
-const pool = createPool({
+const mysql = require('mysql');
+const con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
@@ -8,11 +7,17 @@ const pool = createPool({
     connectionLimit: 10
 })
 
-pool.query(`select * from scooters`, (err, result, fields) => {
+con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!")
+})
+
+con.query(`select * from scooters`, (err, result, fields) => {
     if (err) {
         return console.log(err)
     }
     return console.log(result)
 })
 
-module.exports = pool;
+
+// hahahahahahaha
