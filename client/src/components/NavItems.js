@@ -15,7 +15,7 @@ export const NavItems = [
         cName : "nav-links",
     },
     {
-        title : "Vehicles",
+        title : "Our Rides",
         url : "/vehicles",
         cName : "nav-links",
     }
