@@ -8,9 +8,10 @@ This is the landing page for our project.
 
 ## Price Calculator 
 
-WIP calculator page
+Scooter Price Calculator
 
-![image](https://github.com/Nephilie/lf2-scooteq/assets/17929915/dabc07df-bd76-43e2-b0b9-583857f75a51)
+![image](https://github.com/Nephilie/lf2-scooteq/assets/17929915/34faed67-3faa-4305-b90c-4ed0bc45fb59)
+
 
 
 
