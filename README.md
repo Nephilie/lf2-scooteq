@@ -18,7 +18,8 @@ Scooter Price Calculator
 ![image](https://github.com/Nephilie/lf2-scooteq/assets/17929915/b381a834-8ffd-4827-b3f5-a03386373e30)
 
 ### Prices
-![image](https://github.com/Nephilie/lf2-scooteq/assets/17929915/34e8e894-5835-4f12-baaa-3b9f861cd4f7)
+![image](https://github.com/Nephilie/lf2-scooteq/assets/17929915/30ab3186-5d1d-407e-b383-6e5b0459f4ed)
+
 
 
 
