@@ -10,13 +10,23 @@ export const NavItems = [
         cName : "nav-links",
     },
     {
+        title : "Our Rides",
+        url : "/rides",
+        cName : "nav-links",
+    },
+    {
+        title : "Contact",
+        url : "/Contact",
+        cName : "nav-links",
+    },
+    {
         title : "Scooters",
         url : "/scooters",
         cName : "nav-links",
     },
     {
-        title : "Our Rides",
-        url : "/vehicles",
-        cName : "nav-links",
+        title : "Sign Up",
+        url : "/signup",
+        cName : "nav-links-mobile",
     }
 ]

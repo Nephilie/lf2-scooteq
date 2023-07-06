@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Navbar"
 import Hero from "../Hero";
 import bg from "../../asstes/bg3.jpg";
+import Footer from "../Footer";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         btnClass="show"
         url="/"
       />
+      <Footer/>
     </>
   );
 };

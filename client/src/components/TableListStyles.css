@@ -1,4 +1,4 @@
-h1 {
+.scooter-app h1 {
   font-size: 3rem;
   font-weight: 600;
   color: #000;
@@ -37,9 +37,10 @@ h1 {
 /* battery style */
 .battery-level {
   width: 120px;
-  height: 30px;
+  height: 40px;
   background-color: #eee;
   border-radius: 5px;
+  border:#01959a;
   overflow: hidden;
 }
 

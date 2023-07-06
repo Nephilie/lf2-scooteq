@@ -173,7 +173,7 @@ const TableList = () => {
 
   return (
     <div>
-      <section>
+      <section className="scooter-app">
         <h1>SCOOTERS APP</h1>
         <table className="table">
           <thead>

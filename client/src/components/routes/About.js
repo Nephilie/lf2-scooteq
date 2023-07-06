@@ -2,13 +2,21 @@ import React from "react";
 import Navbar from "../Navbar";
 import img from "../../asstes/hero.jpg";
 import img2 from "../../asstes/bg.jpg"
+import bg from "../../asstes/bg4.jpg";
 import { Col, Container, Row } from "react-bootstrap";
+import Hero from "../Hero";
 
 const About = () => {
   return (
     <>
       <Navbar />
-      <Container style={{ marginTop: "180px" }}>
+      <Hero
+        cName="hero-mid"
+        heroImg={bg}
+        title="About Us"
+        text="Get To Know Us Better"
+      />
+      <Container style={{ marginTop: "150px" }}>
         <Row style={{marginBottom: "50px"}}>
           <Col>
             <h1>Who We Are</h1>
